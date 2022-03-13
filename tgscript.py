@@ -283,7 +283,7 @@ def spam(app, message):
 @app.on_message(filters.command("help", prefixes="-") & filters.me)
 def valentine(app, message):
     app.send_message(message.chat.id,f'''
-📙<b> Команды:</b> \n<b> - https://telegra.ph/Aktualnye-komandy-02-26</b> \n
+📙<b> Команды:</b> \n<b> - https://telegra.ph/Aktualnye-komandy-03-13</b> \n
 
 💎 <b>Приобрести PREMIUM анимацию: </b>\n <b>- NONE</b> \n                             
 
