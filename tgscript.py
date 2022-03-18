@@ -1719,9 +1719,10 @@ def betaloves(_, msg):
     sleep(0.6)
     msg.edit(f'''
     Поиск админа...''')
-    sleep(0.8)
+    sleep(0.6)
     msg.edit(f'''
     Админ найден!''')
+    sleep(0.8)
     msg.edit(f'''
     Идёт поиск анального отверстия админа.''')
     sleep(0.6)
@@ -1730,9 +1731,10 @@ def betaloves(_, msg):
     sleep(0.6)
     msg.edit(f'''
     Идёт поиск анального отверстия админа...''')
-    sleep(0.8)
+    sleep(0.6)
     msg.edit(f'''
     Найдено!''')
+    sleep(0.8)
     msg.edit(f'''
     Измерение анального отверстия админа.''')
     sleep(0.6)
@@ -1741,10 +1743,10 @@ def betaloves(_, msg):
     sleep(0.6)
     msg.edit(f'''
     Измерение анального отверстия админа...''')
-    sleep(1)
+    sleep(0.6)
     msg.edit(f'''
     Анальное отверстие админа состовляет {onal2} км''')
-    sleep(0.8)
+    sleep(1)
     while onal <= 55:
         sleep(0.1)
         onal += 1
