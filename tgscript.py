@@ -5,6 +5,7 @@
 #██╔╝░░░░██║░░░╚██████╔╝██████╔╝╚█████╔╝██║░░██║██║██║░░░░░░░░██║░░░██╗██║░░░░░░░░██║░░░
 #╚═╝░░░░░╚═╝░░░░╚═════╝░╚═════╝░░╚════╝░╚═╝░░╚═╝╚═╝╚═╝░░░░░░░░╚═╝░░░╚═╝╚═╝░░░░░░░░╚═╝░░░
 #Защита: Кто сворует без спроса тот лох ёбанный
+
 import random
 import pickle
 import asyncio
@@ -15,17 +16,16 @@ import textwrap
 import os
 
 app = Client('admin', api_id=15897262, api_hash='90476d9c65a86b03837e1e249314cd75')
-
 app.start()
-
 app.stop()
 if os.sys.platform == "win32":
 	os.system("cls")
 else:
 	os.system("clear")
+
 print('''
 
-▀█▀ █▀▀ █▀ █▀▀ █▀█ █ █▀█ ▀█▀ ░ █▀█ █▄█
+▀█▀ █▀▀ █▀ █▀▀ █▀█ █ █▀█ ▀█▀   █▀█ █▄█
 ░█░ █▄█ ▄█ █▄▄ █▀▄ █ █▀▀ ░█░ ▄ █▀▀ ░█░
 					v.1.2.2
 ''')
@@ -57,9 +57,6 @@ while cool > 10:
 
 while cool < 0:
 	print("ОЧЕНЬ БЫСТРО........")
-	cool = int(input("Введите завис.число - от него будет зависеть скорость (Норма 8):  "))
-
-while cool == None:
 	cool = int(input("Введите завис.число - от него будет зависеть скорость (Норма 8):  "))
 
 @app.on_message(filters.command("gifspam", prefixes=".") & filters.me)
@@ -267,6 +264,46 @@ def valentine(_, msg):
 	msg.edit(f'<b> </b>')
 	msg.edit(f'<b> </b>')
 
+@app.on_message(filters.command("compliment", prefixes=".") & filters.me)
+def valentine(_, msg):
+	txt = comp1.split("\n")
+	e = True
+	etime = int(msg.text.split('.compliment ', maxsplit=1)[1])
+	for i in txt:
+		time = etime
+		if e == True:
+			e = False
+		elif time > 10:
+			try:
+				msg.edit('<b>Error: Нельзя ставить больше 10с!</b>')
+				sleep(0.5)
+				msg.delete()
+			except:
+				pass
+		else:
+			try:
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+			except:
+				pass
+	global number
+	number = number + 1
+	msg.edit(f'<b> </b>')
+	msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("night", prefixes=".") & filters.me)
 def valentine(_, msg):
@@ -286,7 +323,69 @@ def valentine(_, msg):
 				pass
 		else:
 			try:
+				msg.edit(f'{i}'
+					)
+				sleep(time/cool)
 				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+				msg.edit(f'{i}')
+				sleep(time/cool)
+			except:
+				pass
+	global number
+	number = number + 1
+	msg.edit(f'<b> </b>')
+	msg.edit(f'<b> </b>')
+
+
+textded2 = '''
+<b>Доброе утро зайка 💚</b>
+<b>Доброе утро солнышко 💛</b>
+<b>Доброе утро котёнок ❤</b>️
+<b>Доброе утро цветочек 💙</b>
+<b>Доброе утро ангелочек 💜</b>
+<b>Доброе утро принцесса 💓</b>
+<b>Доброе утро красотка 💕</b>
+<b>Доброе утро милашка 💖</b>
+<b>Доброе утро симпатяжка 💗</b>
+<b>Доброе утро бусинка 💘</b>
+<b>❤я❤</b>️
+<b>💚 тебя 💚</b>
+<b>💙 очень 💙</b>
+<b>💛 сильно 💛</b>
+<b>💜 люблю 💜</b>
+'''
+
+@app.on_message(filters.command("day", prefixes=".") & filters.me)
+def valentine(_, msg):
+	txt = textded2.split("\n")
+	e = True
+	etime = int(msg.text.split('.day ', maxsplit=1)[1])
+	for i in txt:
+		time = etime
+		if e == True:
+			e = False
+		elif time > 10:
+			try:
+				msg.edit('<b>Error: Нельзя ставить больше 10с!</b>')
+				sleep(0.5)
+				msg.delete()
+			except:
+				pass
+		else:
+			try:
+				msg.edit(f'{i}'
+					)
 				sleep(time/cool)
 				msg.edit(f'{i}')
 				sleep(time/cool)
@@ -342,13 +441,21 @@ def valentine(app, message):
 
 
 @app.on_message(filters.command("spam", prefixes=".") & filters.me)
-def spam(app, message):
-	spams = " ".join(message.command[2:])
+def spam(app, msg):
+	spams = " ".join(msg.command[2:])
+
 	global number
 	number = number + 1
-	for _ in range(int(message.command[1])):
-		sleep(0.01)
-		app.send_message(message.chat.id, spams)
+
+	if not spams:
+		msg.edit(f'''
+			**Error: Что-то пошло не так...\nИспользование: .spam <кол-во спама> <слово>**''')
+		sleep(1.5)
+		msg.delete()
+	else:
+		for _ in range(int(msg.command[1])):
+			sleep(0.01)
+			app.send_message(msg.chat.id, spams)
 
 @app.on_message(filters.command("spamstick", prefixes=".") & filters.me)
 def spam(app, message):
@@ -1572,6 +1679,176 @@ def valentine(app, msg):
 	 <b> </b>
 	 ''')
 
+@app.on_message(filters.command(["Oxxxymiron", "versus", "battle"], prefixes=".") & filters.me)
+def valentine(app, msg):
+	app.send_message(msg.chat.id, f'''
+	<b>Гавно</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Залупа</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Пенис</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Хер</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Давалка</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Хуй</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Блядина</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Галовка</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Шлюха</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Жопа</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Член</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Еблан</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Петух</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Мудила</b>
+	''')
+	sleep(0.7)
+	app.send_message(msg.chat.id, f'''
+	<b>Рукаблуд</b>
+	''')
+	sleep(0.5)
+	app.send_message(msg.chat.id, f'''
+	<b>Ссанина</b>
+	''')
+	sleep(0.5)
+	app.send_message(msg.chat.id, f'''
+	<b>Очко</b>
+	''')
+	sleep(0.5)
+	app.send_message(msg.chat.id, f'''
+	<b>Блядун</b>
+	''')
+	sleep(0.5)
+	app.send_message(msg.chat.id, f'''
+	<b>Вагина</b>
+	''')
+	sleep(0.4)
+	app.send_message(msg.chat.id, f'''
+	<b>Сука</b>
+	''')
+	sleep(0.4)
+	app.send_message(msg.chat.id, f'''
+	<b>Ебланище</b>
+	''')
+	sleep(0.4)
+	app.send_message(msg.chat.id, f'''
+	<b>Влагалеще</b>
+	''')
+	sleep(0.4)
+	app.send_message(msg.chat.id, f'''
+	<b>Пердун</b>
+	''')
+	sleep(0.4)
+	app.send_message(msg.chat.id, f'''
+	<b>Дрочила</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Пидор</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Пизда</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Туз</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Малафья</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Гомик</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Мудила</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Пилотка</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Манда</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Анус</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Вагина</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Путана</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Педрила</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Шалава</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Хуила</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Мошонка</b>
+	''')
+	sleep(0.3)
+	app.send_message(msg.chat.id, f'''
+	<b>Елда</b>
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	<b>Раунд!</b>
+	''')
+
+	sleep(5)
+	global number
+	number = number + 1
+
 @app.on_message(filters.command(["NeverEnough", "ne", "zxcursed"], prefixes=".") & filters.me)
 def valentine(app, msg):
 	app.send_message(msg.chat.id, f'''
@@ -1875,6 +2152,204 @@ def valentine(app, msg):
 	 <b> </b>
 	 ''')
 
+@app.on_message(filters.command(["kaif", "konfuz"], prefixes=".") & filters.me)
+def valentine(app, msg):
+	app.send_message(msg.chat.id, f'''
+	<b>Твои подружки хотят ко мне в Panamer'у</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Говорят мне о любви, но я не верю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Строчат мне в Inst'у для отметки в Storie</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я выбрал тебя, а остальным — sorry</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твои подружки хотят ко мне в Panamer'у</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Говорят мне о любви, но я не верю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Строчат мне в Inst'у для отметки в Storie</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я выбрал тебя, а остальным — sorry</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты в моих мыслях так плотно засела</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>А я не был грубым, так, просто манера</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Все подружки в шоке, Gucci, Panamera</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>От голоса моего ты опьянела</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Где девочка манит, там так сильно дурманит</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Каждую секунду я звоню, но телеф занят</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты, моя родная, не грусти, не сердись так</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты просто лови, ты лови, ты лови кайф</b>
+	''')
+	app.send_message(msg.chat.id, f'''
+	<b>Твои подружки хотят ко мне в Panamer'у</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Говорят мне о любви, но я не верю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Строчат мне в Inst'у для отметки в Storie</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я выбрал тебя, а остальным — sorry</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твои подружки хотят ко мне в Panamer'у</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Говорят мне о любви, но я не верю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Строчат мне в Inst'у для отметки в Storie</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я выбрал тебя, а остальным — sorry</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кайф ты поймала, тебе всегда мало</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты не представляешь, как мне тебя не хватало</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сильно бьётся сердце, сама не ожидала</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Наконец-то твоя совесть тебя наказала</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Девочка в предвкушении азарта</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Когда встретил тебя, не нашёл пути обратно</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты — моё сокровище, козырная карта</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мы дошли до финиша, не дойдя до старта</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Что ты забыла у меня на repeat'е?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В твоих глазах я тону — помогите!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты, моя родная, не грусти, не сердись так</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты просто лови, ты лови, ты лови кайф</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твои подружки хотят ко мне в Panamer'у</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Говорят мне о любви, но я не верю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Строчат мне в Inst'у для отметки в Storie</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я выбрал тебя, а остальным — sorry</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твои подружки хотят ко мне в Panamer'у</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Говорят мне о любви, но я не верю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Строчат мне в Inst'у для отметки в Storie</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я выбрал тебя, а остальным — sorry</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твои подружки хотят ко мне в Panamer'у</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Говорят мне о любви, но я не верю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Строчат мне в Inst'у для отметки в Storie</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я выбрал тебя, а остальным — sorry</b>
+	''')
+
+	app.send_sticker(msg.chat.id, "CAACAgIAAxkBAAEEPJ1iOeGaHrwudfx0VAkPdzcJV7rSsAACLBYAAqlr0EsgtENNn-yMxyME")
+
+	sleep(0.5)
+	global number
+	number = number + 1
 
 @app.on_message(filters.command("gay", prefixes=".") & filters.me)
 def betaloves(_, msg):
@@ -1966,6 +2441,52 @@ def betaloves(_, msg):
 		sleep(1)
 		msg.edit(f'''
 		Теперь ты 100% гей! ''')
+
+	sleep(5)
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("bogdan", prefixes=".") & filters.me)
+def betaloves(_, msg):
+	kakish1 = 0
+	kakish = random.randint(1, 25)
+
+	msg.edit(f'''
+	Богдан начел искать какиш.''')
+	sleep(0.7)
+	msg.edit(f'''
+	Богдан начел искать какиш..''')
+	sleep(0.7)
+	msg.edit(f'''
+	Богдан начел искать какиш...''')
+	sleep(0.7)
+	while kakish1 <= 99:
+		sleep(0.1)
+		kakish1 += 1
+		msg.edit(f'''
+		Поиск какиша выполнен на {kakish1}%''')
+	if kakish1 >= 99:
+		msg.edit(f'''
+		Богдан считает сколько какиша он нашёл.''')
+		sleep(0.7)
+		msg.edit(f'''
+		Богдан считает сколько какиша он нашёл..''')
+		sleep(0.7)
+		msg.edit(f'''
+		Богдан считает сколько какиша он нашёл...''')
+		sleep(0.7)
+		msg.edit(f'''
+		Богдан считает сколько какиша он нашёл.''')
+		sleep(0.7)
+		msg.edit(f'''
+		Богдан считает сколько какиша он нашёл..''')
+		sleep(0.7)
+		msg.edit(f'''
+		Богдан считает сколько какиша он нашёл...''')
+		sleep(1)
+		msg.edit(f'''
+		Богдан нашел {kakish} кг какиша!''')
+
 
 	sleep(5)
 	global number
@@ -2553,8 +3074,64 @@ def betaloves(_, msg):
 	try0 = random.choice(t)
 	try1 = " ".join(msg.command[1:])
 
-	msg.edit(f'''
-	{try1} {try0}''')
+	if not try1:
+		msg.edit(f'''
+			**Error: Вы не ввели вопрос!\nИспользование: .try <вопрос>**''')
+		sleep(1.5)
+		msg.delete()
+	else:
+		msg.edit(f'''
+			{try1} {try0}''')
+
+	sleep(5)
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("text", prefixes=".") & filters.me)
+def betaloves(_, msg):
+	text1 = " ".join(msg.command[1:])
+
+	if not text1:
+		msg.edit(f'''
+			**Error: Вы не ввели текст!\nИспользование: .text <текст>**''')
+		sleep(1.5)
+		msg.delete()
+	else:
+		msg.edit(f'''
+			{text1}ㅤㅤㅤㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤ{text1}ㅤㅤㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤㅤ{text1}ㅤㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤㅤㅤ{text1}ㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤㅤㅤㅤ{text1}ㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤㅤㅤㅤㅤ{text1}''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤㅤㅤㅤ{text1}ㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤㅤㅤ{text1}ㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤㅤ{text1}ㅤㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			ㅤ{text1}ㅤㅤㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			{text1}ㅤㅤㅤㅤㅤ''')
+		sleep(0.5)
+		msg.edit(f'''
+			{text1}''')
 
 	sleep(5)
 	global number
@@ -3744,6 +4321,148 @@ comp = '''
 <b>Самая гармоничная ✨</b>
 
 <b>Самая отрадная ✨</b>
+'''
+
+comp1 = '''
+<b>Ты удивительная</b> ✨
+
+<b>Ты внимательная</b> ✨
+
+<b>Ты красивая</b> ✨
+
+<b>Ты успешная</b> ✨
+
+<b>Ты заботливая</b> ✨
+
+<b>Ты милая</b> ✨
+
+<b>Ты прекрасная</b> ✨
+
+<b>Ты умная</b> ✨
+
+<b>Ты шикарная</b> ✨
+
+<b>Ты обалденная ✨</b>
+
+<b>Ты очаровашка</b> ✨
+
+<b>Ты любимая</b> ✨
+
+<b>Ты весёлая</b> ✨
+
+<b>Ты нежная</b> ✨
+
+<b>Ты яркая</b> ✨
+
+<b>Ты прелестная</b> ✨
+
+<b>Ты приятная</b> ✨
+
+<b>Ты сладкая</b> ✨
+
+<b>Ты дивная</b> ✨
+
+<b>Ты ангельская</b> ✨
+
+<b>Ты добрая</b> ✨
+
+<b>Ты бесподобная</b> ✨
+
+<b>Ты волшебная</b> ✨
+
+<b>Ты лучшая</b> ✨
+
+<b>Ты крутышка</b> ✨
+
+<b>Ты аромтная</b> ✨
+
+<b>Ты единственная</b> ✨
+
+<b>Ты искренняя</b> ✨
+
+<b>Ты ласковая</b> ✨
+
+<b>Ты романтичная</b> ✨
+
+<b>Ты великолепная</b> ✨
+
+<b>Ты внимательная</b> ✨
+
+<b>Ты страстная</b> ✨
+
+<b>Ты игривая</b> ✨
+
+<b>Ты стройная</b> ✨
+
+<b>Ты безумная</b> ✨
+
+<b>Ты симпатичная</b> ✨
+
+<b>Ты изящная </b> ✨
+
+<b>Ты талантливая ✨</b>
+
+<b>Ты элегантная ✨</b>
+
+<b>Ты чуткая ✨</b>
+
+<b>Ты отзывчивая ✨</b>
+
+<b>Ты уникальная ✨</b>
+
+<b>Ты смелая ✨</b>
+
+<b>Ты уверенная ✨</b>
+
+<b>Ты особенная ✨</b>
+
+<b>Ты изумительная ✨</b>
+
+<b>Ты настоящая ✨</b>
+
+<b>Ты обаятельная ✨</b>
+
+<b>Ты пушистая ✨</b>
+
+<b>Ты кокетливая ✨</b>
+
+<b>Ты теплая ✨</b>
+
+<b>Ты энергичная ✨</b>
+
+<b>Ты неотразимая ✨</b>
+
+<b>Ты неописуемая ✨</b>
+
+<b>Ты грациозная ✨</b>
+
+<b>Ты сказочная ✨</b>
+
+<b>Ты желанная ✨</b>
+
+<b>Ты изысканная ✨</b>
+
+<b>Ты мечтательная ✨</b>
+
+<b>Ты безупречная ✨</b>
+
+<b>Ты совершеная ✨</b>
+
+<b>Ты честная ✨</b>
+
+<b>Ты улыбчивая ✨</b>
+
+<b>Ты ненаглядная ✨</b>
+
+<b>Ты женственная ✨</b>
+
+<b>Ты цветущая ✨</b>
+
+<b>Ты гармоничная ✨</b>
+
+<b>Ты отрадная ✨</b>
+
+<b>Ты няшка милашка ✨</b>
 '''
 
 ziga = '''
