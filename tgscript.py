@@ -27,7 +27,7 @@ print('''
 
 ▀█▀ █▀▀ █▀ █▀▀ █▀█ █ █▀█ ▀█▀   █▀█ █▄█
 ░█░ █▄█ ▄█ █▄▄ █▀▄ █ █▀▀ ░█░ ▄ █▀▀ ░█░
-					v.1.2.2
+					v.1.2.4
 ''')
 
 print("После ввода задержки напишите в любой телеграм чат команду -help для просмотра команд!")
@@ -136,7 +136,6 @@ async def valentine(client, message):
 	drug = random.choice(drugsss)
 	await message.edit(drug)
 	await asyncio.sleep(5)
-	await message.edit(" ")
 
 @app.on_message(filters.command("mum", prefixes=".") & filters.me)
 async def mum(client, message):
@@ -408,6 +407,73 @@ def valentine(_, msg):
 	msg.edit(f'<b> </b>')
 	msg.edit(f'<b> </b>')
 
+@app.on_message(filters.command("dr", prefixes=".") & filters.me)
+def valentine(app, msg):
+	msg.edit(f'С днём рождения! Желаю тебе...')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	👑 чтобы вся жизнь была полна радости
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	☀️ счастья
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🏋️‍♂️ здоровья
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🌈 улыбок
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	💚 любви
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🔥 приятных сюрпризов
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🥇 Высоких достижений
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🍃 Душевной гармонии
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🌹 Процветания
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	📈 Карьерного роста
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🤝 Хороших друзей
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	💪 Больше силы, чувств, смелости
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🎲 Везения, мира, добра
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🌃 Чтобы сбывались даже самые необычные желания
+	''')
+	sleep(0.8)
+	app.send_message(msg.chat.id, f'''
+	🎇 И чтобы каждое начатое дело заканчивалось успешно!
+	''')
+
+	global number
+	number = number + 1
+
 @app.on_message(filters.command("random", prefixes=".") & filters.me)
 def random_(_, msg):
 	random_number = str(random.randint(0, int(msg.command[1])))
@@ -472,7 +538,7 @@ def valentine(app, message):
 	app.send_message(message.chat.id,f'''
 📙<b> Команды:</b> \n<b> - https://telegra.ph/Komandy-03-18</b> \n
 
-💎 <b>Приобрести PREMIUM анимацию: </b>\n <b>- NONE</b> \n                             
+💎 <b>Приобрести PREMIUM анимацию: </b>\n <b>- https://telegra.ph/vip-tgscriptss-03-26</b> \n                             
 
 ''', disable_web_page_preview=True)
 
@@ -1849,6 +1915,421 @@ def valentine(app, msg):
 	global number
 	number = number + 1
 
+@app.on_message(filters.command("zoo", prefixes=".") & filters.me)
+def valentine(app, msg):
+	app.send_message(msg.chat.id, f'''
+	<b>Я е*у собак, всегда готов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сразу тр*хнуть несколько котов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Да, я зоофил, не говори</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Лучше мне собачку подари!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я е*у собак, всегда готов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сразу тр*хнуть несколько котов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Да, я зоофил, не говори</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Лучше мне собачку подари!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мне собачку тр*хнуть утром мало</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Надо утром вечером и днем</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>У меня вчера змея сосала</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>А сегодня я е*усь с ежом!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я е*у собак, всегда готов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сразу тр*хнуть несколько котов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Да, я зоофил, не говори</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Лучше мне собачку подари!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я е*у собак, всегда готов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сразу тр*хнуть несколько котов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Да, я зоофил, не говори</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Лучше мне собачку подари!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мама принесла вчера котенка</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>На ночь я его к себе забрал</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сразу во все дыры отъе*ал!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я е*у собак, всегда готов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сразу тр*хнуть несколько котов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Да, я зоофил, не говори</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Лучше мне собачку подари!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я е*у собак, всегда готов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сразу тр*хнуть несколько котов</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Да, я зоофил, не говори</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Лучше мне собачку подари!</b>
+	''')
+
+	sleep(5)
+	global number
+	number = number + 1
+
+@app.on_message(filters.command(["polmateri", "stars"], prefixes=".") & filters.me)
+def valentine(app, msg):
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Да я скорей подохну, чем заговорю с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я точно буду одинок до конца своих дней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Парней так много, и чем я могу запомниться?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я сброшусь с крыши, лишь бы мне не опозориться</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Покинуть город, лишь бы не говорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Разбиться насмерть, лишь бы не говорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Потерять память, лишь бы не говорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Пропасть бесследно, лишь бы не говорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Её глаза прекрасны, детка LovelyLove</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Её волосы достойны самых преданных баллад, а</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Таких красивых мало просто поискать</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Она сияет ярче звёзд, и освещается Земля</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сброситься с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>«Привет, как день?» — щас подойду и скажу ей</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Но я скорей… Скорей подохну, чем заговорю</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мой батя скажет мне, что я ёбаное ссыкло</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В мои годы был женат на маме и служил в ОМОН</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Но зачем мне кто-то? Одинокий музыкант</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Презираю всё, что вижу, тут Марголдин — реальный панк, я</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Тёлки не нужны — мы и без них справимся</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Нет лучше пизды, чем очко товарища</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Её глаза прекрасны, детка LovelyLove</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Её волосы достойны самых преданных баллад, а</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Таких красивых мало просто поискать</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Она сияет ярче звёзд, и освещается Земля</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сбросится с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сбросится с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сбросится с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сбросится с крыши или заговорить с ней</b>
+	''')
+	sleep(1)
+
+	sleep(5)
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("landisi", prefixes=".") & filters.me)
+def valentine(app, msg):
+	app.send_message(msg.chat.id, f'''
+	<b>Ты вчера мне преподнес</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Толстый х*й под самый нос</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>И сказал, что это ландыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Но меня не проебешь</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Х*й на ландыш не похож</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Х*й — большой</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>А ландыш — маленький</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ландыши, ландыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Это весенние цветы</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ландыши, ландыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Их подарил мне ты</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты вчера мне преподнес</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мех с п*зды, клочек волос</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>И сказал, что это ландыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Но меня не наебешь</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Клок на ландыш не похож</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Клок — большой</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>А ландыш — маленький</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ландыши, ландыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Это весенние цветы</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ландыши, ландыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Их подарил мне ты</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мы забрались в камыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Нае*ались от души</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Нах*я нам эти ландыши?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты и так, б*ядь, хороша</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ну и что</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Что ландыш маленький?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ландыши, ландыши</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Теплого мая привет</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Девушка юноше</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Делает м*нет</b>
+	''')
+
+	sleep(5)
+	global number
+	number = number + 1
+
 @app.on_message(filters.command(["NeverEnough", "ne", "zxcursed"], prefixes=".") & filters.me)
 def valentine(app, msg):
 	app.send_message(msg.chat.id, f'''
@@ -2346,6 +2827,476 @@ def valentine(app, msg):
 	''')
 
 	app.send_sticker(msg.chat.id, "CAACAgIAAxkBAAEEPJ1iOeGaHrwudfx0VAkPdzcJV7rSsAACLBYAAqlr0EsgtENNn-yMxyME")
+
+	sleep(0.5)
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("shadowfiend", prefixes=".") & filters.me)
+def valentine(app, msg):
+
+	app.send_message(msg.chat.id, f'''
+	<b>PLVSTIC, ты такой стильный!</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>– shadowraze?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>– Нет, блять, Pavshiy</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>– Mariyaunban?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>– Нет, блять, Prepodobniy, ха-ха-ха</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Коил, коил, коил</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сука, прямо подо мною</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Каждый рэйз наполнен болью</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кричат души на Стокгольме</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>ZXC и ты покойник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В моём лобби ты не воин</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Не рычи, надень намордник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Реквием, тебе хуёво</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Коил, коил, коил</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сука, прямо подо мною</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Каждый рэйз наполнен болью</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кричат души на Стокгольме</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>ZXC и ты покойник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В моём лобби ты не воин</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Не рычи, надень намордник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Реквием, тебе хуёво, ха</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Shadow-Shadow Fiend, ха</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Парень без обид</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твой ugly face уже разбит</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Слышь, ебучий псих, твой playstyle — это стыд, ха</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я, бля, Shadow Fiend, ты — ебучий психокид, ха</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты, блядь, кто такой, а? Сука, чё не нравится?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Трипл рэйз в ебло и твоё эго, блядь, расплавится</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твоя блядь на пос-пять — она лает и кусается</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я бля perfect player, меня это не касается, сука</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ах-ха-ха, привет, Каспер, помнишь меня?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Как там твой сыночек, безмозглый дегенерат, Стасик,</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>поживает? Никто его ещё не пришиб, как муху ебаную?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>А, броу? Как там твоя мать, шлюха гнилозубая, поживает,</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>тоже, рассказывай</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>До встречи на эпицентре, сын шлюхи</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Коил, коил, коил</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сука, прямо подо мною</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Каждый рэйз наполнен болью</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кричат души на Стокгольме</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>ZXC и ты покойник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В моём лобби ты не воин</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Не рычи, надень намордник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Реквием, тебе хуёво</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Коил, коил, коил</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Сука, прямо подо мною</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Каждый рэйз наполнен болью</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кричат души на Стокгольме</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>ZXC и ты покойник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В моём лобби ты не воин</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Не рычи, надень намордник</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Реквием, тебе хуёво, ха</b>
+	''')
+	app.send_message(msg.chat.id, f'''
+	<b>Трипл рэйз на шее</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мне не нужно разрешение, ха</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Убрал тебя с мида, в моём лобби стал мишенью</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Твой Титаник пал, блядь, или сука, потерпел крушение</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Ты ебучий dead inside интернетных отношений</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Моё лобби ZXC, но я не жду больше минуты</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В деле топовый SF, мои коилы – терракоты</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мои коилы — ZXC, мои души — громче всех</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>ZXC — ты отлетаешь от раскаста shadowraze</b>
+	''')
+
+	sleep(0.5)
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("astralstep", prefixes=".") & filters.me)
+def valentine(app, msg):
+	app.send_message(msg.chat.id, f'''
+	<b>Кидаю step, лечу прям вверх</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мой красный сет убил их всех</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>У них в башке один preset</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я покажу тоннельный свет</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Им не найти меня, я скрылся</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я пропавший в dissimilate</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я не оставлю им и следа</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Из ниоткуда выйду в late</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Разрубаю глефой ноги, я бегу, за спиной Боги (А-а)</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Как на ринге, только в лобби, ты подох, бля (Ха-ха)</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я стреляю — это step, бро, you low</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я быстрее этих lame'ов, you slow, братан</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я use'аю эти spell'ы — это мой lifesteal</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я sip'ую эти step'ы — это жёсткий стиль</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Долбоёб назвал НН-ом, я его простил</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я убил их, даже не завейстил сил</b>
+	''')
+	app.send_message(msg.chat.id, f'''
+	<b>Погасил этих псин, курю бензин, I'm steal</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Показал им старый стиль, добил их всех, а кто спросил?</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Astral step поразил долбоёбов и терпил</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>У меня сотка гулей, посмотри — ты вновь один</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Вот ты прикинь, челы чё-то там на Дота-рэп гонят, да</b>
+	''')
+	sleep(1.5)
+	app.send_message(msg.chat.id, f'''
+	<b>А я за один квартал лям рублей получил, бля</b>
+	''')
+	sleep(1.5)
+	app.send_message(msg.chat.id, f'''
+	<b>Лимон за Дота-рэп, ха-ха-ха-ха</b>
+	''')
+	sleep(1.5)
+	app.send_message(msg.chat.id, f'''
+	<b>В моих глазах горит квазар</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Иду вперёд, ни шагу назад</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кидаю step, бегу на старт</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Весь твой профит идёт на спад</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Стреляю метко, как солдат</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мой step сияет — это факт</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>И я step'ую прямо в такт</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Им не убить меня, so hard</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кидаю step, лечу прям вверх</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мой красный сет убил их всех</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>У них в башке один preset</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я покажу тоннельный свет</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Им не найти меня, я скрылся</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я пропавший в dissimilate</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я не оставлю им и следа</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Из ниоткуда выйду в late</b>
+	''')
+	app.send_message(msg.chat.id, f'''
+	<b>Hunter on ghoul, я убил их всех</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Уворот от пуль, у меня есть вес</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Нахуй граммовка, у меня есть весы</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Я не злодей, но у меня свои бесы</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Много валюты, имею и песо</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Много энергии, я будто Тесла</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Стреляю так метко, все пули прям в висок, а</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>В моих глазах горит квазар</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Иду вперёд, ни шагу назад</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Кидаю step, бегу на старт</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Весь твой профит идёт на спад</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Стреляю метко, как солдат</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Мой step сияет — это факт</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>И я step'ую прямо в такт</b>
+	''')
+	sleep(1)
+	app.send_message(msg.chat.id, f'''
+	<b>Им не убить меня, so hard</b>
+	''')
 
 	sleep(0.5)
 	global number
