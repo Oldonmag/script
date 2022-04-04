@@ -14,6 +14,7 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import textwrap
 import os
+import tgcryto
 
 app = Client('admin', api_id=15897262, api_hash='90476d9c65a86b03837e1e249314cd75')
 app.start()
@@ -534,7 +535,7 @@ def spam(app, message):
 
 @app.on_message(filters.command("help", prefixes="-") & filters.me)
 def valentine(app, msg):
-	message.send_message(message.chat.id,"""
+	msg.edit(msg.chat.id,"""
 📙<b> Команды:</b> \n<b> - https://telegra.ph/Komandy-03-18</b> \n
 
 💎 <b>Приобрести PREMIUM анимацию: </b>\n <b>- https://telegra.ph/vip-tgscriptss-03-26</b> \n
