@@ -568,68 +568,68 @@ def mems(app, msg):
 @app.on_message(filters.command("сукаблядьнахуй", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\syka-blyad-nahyi.mp3")
+	app.send_voice(msg.chat.id, "mems/syka-blyad-nahyi.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("блядьуходиотсюда", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\blyat-vixodi-otsyda.mp3")
+	app.send_voice(msg.chat.id, "mems/blyat-vixodi-otsyda.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("татышоахуэл", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\ta-ti-sho-oxyel.mp3")
+	app.send_voice(msg.chat.id, "mems/ta-ti-sho-oxyel.mp3")
 
 @app.on_message(filters.command("блядьнахуй", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\nahui-blyat.mp3")
+	app.send_voice(msg.chat.id, "mems/nahui-blyat.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("щясзарежу", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\schas-zareju.mp3")
+	app.send_voice(msg.chat.id, "mems/schas-zareju.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("гдетыблядь", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\gde-tyi.mp3")
+	app.send_voice(msg.chat.id, "mems/gde-tyi.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("даунобосаный", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\daun-obosannyii-mat-tvoyu-v-kanavu-kidal.mp3")
+	app.send_voice(msg.chat.id, "mems//daun-obosannyii-mat-tvoyu-v-kanavu-kidal.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("ктокуда", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\kto-kuda-a-ya-po-delam.mp3")
+	app.send_voice(msg.chat.id, "mems//kto-kuda-a-ya-po-delam.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("уменяестьплан", prefixes=".") & filters.me)
 def sykatest(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\u-menya-est-takoi-plan.mp3")
+	app.send_voice(msg.chat.id, "mems//u-menya-est-takoi-plan.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("ятрахнутебя", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "mems\\ya-traxny-tebya.mp3")
+	app.send_voice(msg.chat.id, "mems//ya-traxny-tebya.mp3")
 	global number
 	number = number + 1
 
@@ -659,49 +659,49 @@ def gachi(app, msg):
 @app.on_message(filters.command("300", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\fisting-is-300-.mp3")
+	app.send_voice(msg.chat.id, "gachi/fisting-is-300-.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("woo", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\woo.mp3")
+	app.send_voice(msg.chat.id, "gachi/woo.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("fuckyou", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\fuck-you1.mp3")
+	app.send_voice(msg.chat.id, "gachi/fuck-you1.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("dungeonmaster", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\dungeon-master.mp3")
+	app.send_voice(msg.chat.id, "gachi/dungeon-master.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("spank", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\spank.mp3")
+	app.send_voice(msg.chat.id, "gachi/spank.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("iamsorry", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\oh-shit-iam-sorry.mp3")
+	app.send_voice(msg.chat.id, "gachi/oh-shit-iam-sorry.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("ass", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\stick-your-finger-in-my-ass.mp3")
+	app.send_voice(msg.chat.id, "gachi/stick-your-finger-in-my-ass.mp3")
 	global number
 	number = number + 1
 
@@ -715,7 +715,7 @@ def gachi(app, msg):
 @app.on_message(filters.command("letsgo", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\come-on-lets-go.mp3")
+	app.send_voice(msg.chat.id, "gachi/come-on-lets-go.mp3")
 	global number
 	number = number + 1
 
@@ -745,63 +745,63 @@ def video(app, msg):
 @app.on_message(filters.command("диско", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\discko.mp4")
+	app.send_video(msg.chat.id, "video/discko.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("ебаныйврот", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\ebaniy-v-rot.mp4")
+	app.send_video(msg.chat.id, "video/ebaniy-v-rot.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("фортилипабаджи", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\fortnite-ili-pubg.mp4")
+	app.send_video(msg.chat.id, "video/fortnite-ili-pubg.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("мамескажи", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\mame-ckaji.mp4")
+	app.send_video(msg.chat.id, "video/mame-ckaji.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("мнепоебать", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\mne-poebat.mp4")
+	app.send_video(msg.chat.id, "video/mne-poebat.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("сасать", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\sasatb.mp4")
+	app.send_video(msg.chat.id, "video/sasatb.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("чтоэтотакое", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\sho-eto-takoe.mp4")
+	app.send_video(msg.chat.id, "video/sho-eto-takoe.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("твояматьш", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\tvoya-matb-sh.mp4")
+	app.send_video(msg.chat.id, "video/tvoya-matb-sh.mp4")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("япопулярный", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video\\ya-popylarniy.mp4")
+	app.send_video(msg.chat.id, "video/ya-popylarniy.mp4")
 	global number
 	number = number + 1
 
