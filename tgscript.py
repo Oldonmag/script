@@ -14,7 +14,6 @@ from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
 import textwrap
 import os
-import tgcryto
 
 app = Client('admin', api_id=15897262, api_hash='90476d9c65a86b03837e1e249314cd75')
 app.start()
