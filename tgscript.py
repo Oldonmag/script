@@ -701,14 +701,14 @@ def gachi(app, msg):
 @app.on_message(filters.command("ass", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\stick-your-finger-in-my-ass.mp3")
+	app.send_voice(msg.chat.id, "gachi\stick-your-finger-in-my-ass.mp3")
 	global number
 	number = number + 1
 
 @app.on_message(filters.command("boynextdoor", prefixes=".") & filters.me)
 def gachi(app, msg):
 	msg.delete()
-	app.send_voice(msg.chat.id, "gachi\\boy-next-door.mp3")
+	app.send_voice(msg.chat.id, "gachi/boy-next-door.mp3")
 	global number
 	number = number + 1
 
