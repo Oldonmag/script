@@ -520,7 +520,6 @@ def spam(app, msg):
 		msg.delete()
 	else:
 		for _ in range(int(msg.command[1])):
-			sleep(0.01)
 			app.send_message(msg.chat.id, spams)
 
 @app.on_message(filters.command("spamstick", prefixes=".") & filters.me)
@@ -534,18 +533,316 @@ def spam(app, message):
 		app.send_sticker(message.chat.id, "{0}".format(stik2))
 
 @app.on_message(filters.command("help", prefixes="-") & filters.me)
-def valentine(app, message):
-	app.send_message(message.chat.id,f'''
+def valentine(app, msg):
+	message.send_message(message.chat.id,"""
 📙<b> Команды:</b> \n<b> - https://telegra.ph/Komandy-03-18</b> \n
 
-💎 <b>Приобрести PREMIUM анимацию: </b>\n <b>- https://telegra.ph/vip-tgscriptss-03-26</b> \n                             
+💎 <b>Приобрести PREMIUM анимацию: </b>\n <b>- https://telegra.ph/vip-tgscriptss-03-26</b> \n
+""", disable_web_page_preview=True)
 
-''', disable_web_page_preview=True)
+@app.on_message(filters.command("mems", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_message(msg.chat.id, f'''
+	✨ Меню голосовых мемов:
+	(Примичание: Они могут подгружатся дольше чем надо, смотря какая скорость у интернета.)
+		
+	 1) Команда: ".сукаблядьнахуй"
+	 2) Команда: ".блядьуходиотсюда"
+	 3) Команда: ".татышоахуэл"
+	 4) Команда: ".блядьнахуй"
+	 5) Команда: ".щясзарежу"
+	 6) Команда: ".гдетыблядь"
+	 7) Команда: ".даунобосаный"
+	 8) Команда: ".ктокуда"
+	 9) Команда: ".уменяестьплан"
+	 10) Команда: ".ятрахнутебя"
+
+	
+	(Все команды нужно писать без ковычек)
+	Автор скрипта: @tgscriptss
+		''')
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("сукаблядьнахуй", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\syka-blyad-nahyi.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("блядьуходиотсюда", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\blyat-vixodi-otsyda.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("татышоахуэл", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\ta-ti-sho-oxyel.mp3")
+
+@app.on_message(filters.command("блядьнахуй", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\nahui-blyat.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("щясзарежу", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\schas-zareju.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("гдетыблядь", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\gde-tyi.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("даунобосаный", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\daun-obosannyii-mat-tvoyu-v-kanavu-kidal.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("ктокуда", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\kto-kuda-a-ya-po-delam.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("уменяестьплан", prefixes=".") & filters.me)
+def sykatest(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\u-menya-est-takoi-plan.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("ятрахнутебя", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "mems\\ya-traxny-tebya.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("gachi", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_message(msg.chat.id, f'''
+	💪 Меню голосовых **GACHY** мемов:
+	(Примичание: Они могут подгружатся дольше чем надо, смотря какая скорость у интернета.)
+		
+	 1) Команда: ".300"
+	 2) Команда: ".woo"
+	 3) Команда: ".fuckyou"
+	 4) Команда: ".dungeonmaster"
+	 5) Команда: ".spank"
+	 6) Команда: ".iamsorry"
+	 7) Команда: ".ass"
+	 8) Команда: ".boynextdoor"
+	 9) Команда: ".letsgo"
+	
+	(Все команды нужно писать без ковычек)
+	Автор скрипта: @tgscriptss
+	''')
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("300", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\fisting-is-300-.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("woo", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\woo.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("fuckyou", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\fuck-you1.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("dungeonmaster", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\dungeon-master.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("spank", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\spank.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("iamsorry", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\oh-shit-iam-sorry.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("ass", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\stick-your-finger-in-my-ass.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("boynextdoor", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\boy-next-door.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("letsgo", prefixes=".") & filters.me)
+def gachi(app, msg):
+	msg.delete()
+	app.send_voice(msg.chat.id, "gachi\\come-on-lets-go.mp3")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("video", prefixes=".") & filters.me)
+def video(app, msg):
+	msg.delete()
+	app.send_message(msg.chat.id, f'''
+	🎞 Меню видео-мемов:
+	(Примичание: Они могут подгружатся дольше чем надо, смотря какая скорость у интернета.)
+		
+	 1) Команда: ".диско"
+	 2) Команда: ".ебаныйврот"
+	 3) Команда: ".фортилипабаджи"
+	 4) Команда: ".мамескажи"
+	 5) Команда: ".мнепоебать"
+	 6) Команда: ".сасать"
+	 7) Команда: ".чтоэтотакое"
+	 8) Команда: ".твояматьш"
+	 9) Команда: ".япопулярный"
+	
+	(Все команды нужно писать без ковычек)
+	Автор скрипта: @tgscriptss
+	''')
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("диско", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\discko.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("ебаныйврот", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\ebaniy-v-rot.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("фортилипабаджи", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\fortnite-ili-pubg.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("мамескажи", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\mame-ckaji.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("мнепоебать", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\mne-poebat.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("сасать", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\sasatb.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("чтоэтотакое", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\sho-eto-takoe.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("твояматьш", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\tvoya-matb-sh.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("япопулярный", prefixes=".") & filters.me)
+def mems(app, msg):
+	msg.delete()
+	app.send_video(msg.chat.id, "video\\ya-popylarniy.mp4")
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("bank", prefixes=".") & filters.me)
+def betaloves(_, msg):
+	bank = 0
+	bank1 = random.randint(1, 2500)
+
+	msg.edit(f'''
+	Идёт взлом банковской карты.''')
+	sleep(0.7)
+	msg.edit(f'''
+	Идёт взлом банковской карты..''')
+	sleep(0.7)
+	msg.edit(f'''
+	Идёт взлом банковской карты...''')
+	sleep(0.7)
+	msg.edit(f'''
+	Получение данных.''')
+	sleep(0.7)
+	msg.edit(f'''
+	Получение данных..''')
+	sleep(0.7)
+	msg.edit(f'''
+	Получение данных...''')
+	sleep(0.7)
+	while bank <= 99:
+		bank += 1
+		msg.edit(f'''
+		взлом завершён на {bank}%''')
+	if bank >= 99:
+		msg.edit(f'''
+		Взлом банковской карты успешно завершён!\nСо счёта снято {bank1} руб.''')
+		
+	sleep(5)
+	global number
+	number = number + 1
 
 @app.on_message(filters.command("profile", prefixes="/") & filters.me)
 def help(app, message):
 	global number
-	#app.send_sticker(message.chat.id, "CAACAgIAAxkBAAEEEBZiI7rAcsLoSnaFlDjhCyi7KFcy6QACtg8AAg9W-UkHRqyQjgWY3iME")
 	app.send_message(
 		message.chat.id,
 		f"""💾<b> Профиль: </b> \n\n<b> Пользователь:</b><code> {message.from_user.first_name}</code>\n<b> Статус: User</b>\n\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Анимаций по старту:</b> <code>{number}</code>\n </b>""",
