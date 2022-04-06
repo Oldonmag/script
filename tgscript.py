@@ -533,12 +533,13 @@ def spam(app, message):
 		app.send_sticker(message.chat.id, "{0}".format(stik2))
 
 @app.on_message(filters.command("help", prefixes="-") & filters.me)
-def valentine(app, msg):
-	msg.edit(msg.chat.id,"""
+def valentine(app, message):
+	message.delete()
+	app.send_message(message.chat.id,"""
 📙<b> Команды:</b> \n<b> - https://telegra.ph/Komandy-03-18</b> \n
 
 💎 <b>Приобрести PREMIUM анимацию: </b>\n <b>- https://telegra.ph/vip-tgscriptss-03-26</b> \n
-""", disable_web_page_preview=True)
+		""", disable_web_page_preview=True)
 
 @app.on_message(filters.command("mems", prefixes=".") & filters.me)
 def mems(app, msg):
