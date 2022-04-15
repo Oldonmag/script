@@ -799,7 +799,7 @@ def mems(app, msg):
 @app.on_message(filters.command("мнепоебать", prefixes=".") & filters.me)
 def mems(app, msg):
 	msg.delete()
-	app.send_video(msg.chat.id, "video/mne-poebat.mp4")
+	app.send_video(msg.chat.id, "video/mne-poebat.MP4")
 	global number
 	number = number + 1
 
