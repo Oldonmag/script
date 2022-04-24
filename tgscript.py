@@ -50,7 +50,7 @@ print(Fore.RED + Style.BRIGHT +'''				v.1.2.6
 
 print(Fore.GREEN + Style.BRIGHT + ">>> Информация: ")
 print(Fore.YELLOW + Style.BRIGHT +"Напишите в любой телеграм чат команду -help, \nдля просмотра всех команд!")
-print("\nАвтор скрипта -\nTelegram: @tgscriptss\nTikTok: @tgscript\nВ других соц.сетей нас нет!\n")
+print("\nАвтор скрипта -\nTelegram: @tgscriptss\nTikTok: @tgscript\nВ других соц.сетях нас нет!\n")
 
 print(Fore.GREEN + Style.BRIGHT + ">> Скорость: ")
 cool = int(input(Fore.WHITE + Style.RESET_ALL + "<*> Введите скорость от 3 до 10 (Норма 8): "))
@@ -128,8 +128,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 textded = '''
 <b> Я дед инсайд </b>
@@ -137,6 +135,184 @@ textded = '''
 <b> И я хочу в Психокидс </b>
 '''
 
+
+@app.on_message(filters.command("heart2", prefixes=".") & filters.me)
+async def valentine(app, msg):
+	heart2 = 0
+	while heart2 <= 1:
+		await msg.edit(f'''
+			❤''')
+		sleep(0.5)
+		await msg.edit(f'''
+			🧡''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💛''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💚''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💙''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💜''')
+		sleep(0.5)
+		await msg.edit(f'''
+			🤎''')
+		sleep(0.5)
+		await msg.edit(f'''
+			🖤''')
+		sleep(0.5)
+		await msg.edit(f'''
+			🤍''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💖''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💗''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💘''')
+		sleep(0.5)
+		await msg.edit(f'''
+			💝''')
+		sleep(0.5)
+		heart2 += 1
+	if heart2 >= 2:
+		sleep(5)
+		await msg.edit(msg.chat.id, f'''
+			🍃 author: @tgscriptss''')
+		sleep(5)
+		await msg.delete()
+
+@app.on_message(filters.command("zaika", prefixes=".") & filters.me)
+async def valentine(app, msg):
+	zaika = 0
+	zaika2 = 0
+	while zaika < 100:
+		await msg.edit(f'''
+			💖 Поиск зайки... {zaika}%''')
+		zaika += 1
+	if zaika >= 100:
+		await msg.edit(f'''
+			✅ Зайка успешно найдена!''')
+		sleep(1)
+		while zaika2 < 100:
+			await msg.edit(f'''
+				🤔 Подбираю слова что-бы описать тебя... {zaika2}%''')
+			zaika2 += 1
+		if zaika2 >= 100:
+			await msg.edit(f'''
+				❤ Ты самый лучший человек которого я видел!''')
+			sleep(5)
+			await msg.edit(f'''
+				🍃 author: @tgscriptss''')
+			sleep(5)
+			await msg.delete()
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("penis", prefixes=".") & filters.me)
+async def valentine(app, msg):
+	penis = 0
+	penis2 = random.randint(1, 20)
+
+	await msg.edit(f'''
+		☑ Увеличение пениса запущено.''')
+	sleep(1)
+	await msg.edit(f'''
+		☑ Увеличение пениса запущено..''')
+	sleep(1)
+	await msg.edit(f'''
+		☑ Увеличение пениса запущено...''')
+	sleep(1)
+
+	while penis < 100:
+		await msg.edit(f'''
+			📈 Увеличение пениса завершено на {penis}%''')
+		penis += 1
+	if penis >= 100:
+		await msg.edit(f'''
+			✅ Ваш пенис увеличен на {penis2} см!''')
+		sleep(5)
+		await msg.edit(f'''
+			🍃 author: @tgscriptss''')
+		sleep(5)
+		await msg.delete()
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("vzlom", prefixes=".") & filters.me)
+async def valentine(app, msg):
+	vzlom = 0
+
+	await msg.edit(f'''
+		💾 Взлом аккаунта скоро начнётся.''')
+	sleep(1)
+	await msg.edit(f'''
+		💾 Взлом аккаунта скоро начнётся..''')
+	sleep(1)
+	await msg.edit(f'''
+		💾 Взлом аккаунта скоро начнётся...''')
+	sleep(1)
+
+	while vzlom < 100:
+		await msg.edit(f'''
+			❗ Происходит взлом аккаунта... {vzlom}%''')
+		vzlom += 1
+	if vzlom >= 100:
+		await msg.edit(f'''
+			✅ Взлом акканута успешно завершен!''')
+		sleep(0.5)
+		await msg.edit(f'''
+			📲 Передача данных в базу данных.''')
+		sleep(0.5)
+		await msg.edit(f'''
+			📱 Передача данных в базу данных..''')
+		sleep(0.5)
+		await msg.edit(f'''
+			📲 Передача данных в базу данных...''')
+		sleep(0.5)
+		await msg.edit(f'''
+			✅ Аккаунт успешно взломан!''')
+		sleep(0.5)
+		await msg.edit(f'''
+			🍃 author: @tgscriptss''')
+		sleep(5)
+		await msg.delete()
+	global number
+	number = number + 1
+
+@app.on_message(filters.command("vzlomip", prefixes=".") & filters.me)
+async def valentine(app, msg):
+	vzlomip = 0
+
+	await msg.edit(f'''
+		💾 Поиск айпи начался.''')
+	sleep(1)
+	await msg.edit(f'''
+		💾 Поиск айпи начался..''')
+	sleep(1)
+	await msg.edit(f'''
+		💾 Поиск айпи начался...''')
+	sleep(1)
+
+	while vzlomip < 100:
+		await msg.edit(f'''
+			❗ Происходит поиск IP... {vzlomip}%''')
+		vzlomip += 1
+	if vzlomip >= 100:
+		await msg.edit(f'''
+			✅ IP-адрес успешно найдён!''')
+		sleep(5)
+		await msg.edit(f'''
+			🍃 author: @tgscriptss''')
+		sleep(5)
+		await msg.delete()
+	global number
+	number = number + 1
 
 @app.on_message(filters.command("drugs", prefixes=".") & filters.me)
 async def valentine(client, message):
@@ -221,11 +397,6 @@ def valentine(_, msg):
 		except FloodWait as e:
 			sleep(e.x)
 
-
-
-
-
-
 textded1 = '''
 <b>спокойной ночи зайка 💚</b>
 <b>спокойной ночи солнышко 💛</b>
@@ -283,8 +454,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("compliment", prefixes=".") & filters.me)
 def valentine(_, msg):
@@ -324,8 +493,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("night", prefixes=".") & filters.me)
 def valentine(_, msg):
@@ -366,8 +533,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 
 textded2 = '''
@@ -427,8 +592,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("dr", prefixes=".") & filters.me)
 def valentine(app, msg):
@@ -990,6 +1153,10 @@ def help(app, message):
 		message.chat.id,
 		f"""💾<b> Профиль: </b> \n\n<b> Пользователь:</b><code> {message.from_user.first_name}</code>\n<b> Статус: User</b>\n\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Анимаций по старту:</b> <code>{number}</code>\n </b>""",
 		disable_web_page_preview=True)
+	app.send_message(message.chat.id, f'''
+		🍃 author: @tgscriptss''')
+	sleep(3)
+	msg.delete()
 
 @app.on_message(filters.command("maslo", prefixes=".") & filters.me)
 def betalove(_, msg):
@@ -1011,8 +1178,6 @@ def betalove(_, msg):
 		sleep(5)
 		global number
 		number = number + 1
-		msg.edit(f'<b> </b>')
-		msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("football", prefixes=".") & filters.me)
 def betalove(_, msg):
@@ -1036,8 +1201,6 @@ def betalove(_, msg):
 		sleep(5)
 		global number
 		number = number + 1
-		msg.edit(f'<b> </b>')
-		msg.edit(f'<b> </b>')
 
 foot = ["<b>❌ К сожалению, вы проиграли..</b>", "<b>✅ Вы забили гол и победили в игре!</b>"]
 
@@ -1077,8 +1240,6 @@ def betalove(_, msg):
 		sleep(5)
 		global number
 		number = number + 1
-		msg.edit(f'<b> </b>')
-		msg.edit(f'<b> </b>')
 
 kill = ["<b>🔪 Убийца нашел тебя, к сожалению ты спрятался плохо и был убит</b>", "<b>⚔️Убийца не нашел тебя, вы  очень хорошо спрятались.</b>"]
 
@@ -1122,8 +1283,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("love", prefixes=".") & filters.me)
 def valentine(_, msg):
@@ -1163,8 +1322,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("zxc", prefixes=".") & filters.me)
 def valentine(_, msg):
@@ -1204,8 +1361,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b></b>')
 
 @app.on_message(filters.command("ziga", prefixes=".") & filters.me)
 def valentine(_, msg):
@@ -1245,8 +1400,6 @@ def valentine(_, msg):
 				pass
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
-	msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("like", prefixes=".") & filters.me)
 def betaloves(_, msg):
@@ -1483,7 +1636,6 @@ def betaloves(_, msg):
 		sleep(5)
 		global number
 		number = number + 1
-		msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("dislike", prefixes=".") & filters.me)
 def betaloves(_, msg):
@@ -1776,7 +1928,6 @@ def betaloves(_, msg):
 		sleep(4)
 		global number
 		number = number + 1
-		msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("loves", prefixes=".") & filters.me)
 def betaloves(_, msg):
@@ -1912,7 +2063,6 @@ def betaloves(_, msg):
 		sleep(3)
 		global number
 		number = number + 1
-		msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("heart", prefixes=".") & filters.me)
 def betalove(_, msg):
@@ -1999,8 +2149,6 @@ def betalove(_, msg):
 		sleep(1)
 		global number
 		number = number + 1
-		msg.edit(f'<b> </b>')
-		msg.edit(f'<b> </b>')
 
 @app.on_message(filters.command("showdown", prefixes=".") & filters.me)
 def valentine(app, msg):
@@ -5529,7 +5677,6 @@ def betaloves(_, msg):
 	sleep(5)
 	global number
 	number = number + 1
-	msg.edit(f'<b> </b>')
 
 
 @app.on_message(filters.command("toxic", prefixes=".") & filters.me)
@@ -6462,9 +6609,6 @@ ziga = '''
 🤍🤍🤍🤍🤍🤍🤍🤍🤍
 🤍🤍🤍🤍🤍🤍🤍🤍🤍
 '''
-
-
-
 
 end_message = '<b>  </b>'
 app.run()
