@@ -97,34 +97,57 @@ async def valentine(app, msg):
 		bot_results = await app.get_inline_bot_results("inlinegamesbot", "Tic-Tak-Toe")
 		await app.send_inline_bot_result(msg.chat.id, bot_results.query_id,bot_results.results[0].id)
 
-	if plays == "2":
-		await msg.edit(f'''**Нужно чтобы 2-й игрок нажал на Join**''')
-		bot_results = await app.get_inline_bot_results("inlinegamesbot", "Rock-Paper-Scissors")
-		await app.send_inline_bot_result(msg.chat.id, bot_results.query_id,bot_results.results[0].id)
-
-	if plays == "3":
-		await msg.edit(f'''**Нужно чтобы 2-й игрок нажал на Join**''')
-		bot_results = await app.get_inline_bot_results("inlinegamesbot", "Russian Roulette")
-		await app.send_inline_bot_result(msg.chat.id, bot_results.query_id,bot_results.results[0].id)
-
 	if not plays:
 		await msg.edit(f'''
-			**Error: Что-то пошло не так...\nИспользование: .play <номер игры(от 1 до 3)>\n\nОбьяснение: \n".play 1" - Игра в крестики нолики\n".play 2" - Камень ножницы бумага\n".play 3" - Русская рулетка**''')
+			**Error: Что-то пошло не так...\nИспользование: .play 1\n\nОбьяснение: \n".play 1" - Игра в крестики нолики**''')
 		sleep(3)
 		await msg.delete()
 
-	if plays > "3":
+	if plays > "1":
 		await msg.edit(f'''
-			**Error: Что-то пошло не так...\nИспользование: .play <номер игры(от 1 до 3)>\n\nОбьяснение: \n".play 1" - Игра в крестики нолики\n".play 2" - Камень ножницы бумага\n".play 3" - Русская рулетка**''')
+			**Error: Что-то пошло не так...\nИспользование: .play 1\n\nОбьяснение: \n".play 1" - Игра в крестики нолики**''')
 		sleep(3)
 		await msg.delete()
 
 	if plays < "1":
 		await msg.edit(f'''
-			**Error: Что-то пошло не так...\nИспользование: .play <номер игры(от 1 до 3)>\n\nОбьяснение: \n".play 1" - Игра в крестики нолики\n".play 2" - Камень ножницы бумага\n".play 3" - Русская рулетка**''')
+			**Error: Что-то пошло не так...\nИспользование: .play 1\n\nОбьяснение: \n".play 1" - Игра в крестики нолики**''')
 		sleep(3)
 		await msg.delete()
 
+@app.on_message(filters.command('youtube', prefixes='.') & filters.me)
+async def valentine(app, msg):
+	name = " ".join(msg.command[1:])
+
+	global number
+	number = number + 1
+
+	if not name:
+		await msg.edit(f'''
+			**Error: Что-то пошло не так...\nИспользование: .youtube <Название видео на ютубе(можно не полное)>**''')
+		sleep(3)
+		await msg.delete()
+
+	else:
+		bot_results = await app.get_inline_bot_results("vid", name)
+		await app.send_inline_bot_result(msg.chat.id, bot_results.query_id,bot_results.results[0].id)
+
+@app.on_message(filters.command('photo', prefixes='.') & filters.me)
+async def valentine(app, msg):
+	photos = " ".join(msg.command[1:])
+
+	global number
+	number = number + 1
+
+	if not photos:
+		await msg.edit(f'''
+			**Error: Что-то пошло не так...\nИспользование: .photo <Краткое описание картинки>\n\nОбьяснение:\n".photo <текст>" - ищет картинку в яндексе с указаным текстом, пример: ".photo котёнок"**''')
+		sleep(3)
+		await msg.delete()
+
+	else:
+		bot_results = await app.get_inline_bot_results("pic", photos)
+		await app.send_inline_bot_result(msg.chat.id, bot_results.query_id,bot_results.results[0].id)
 
 
 @app.on_message(filters.command('xleb', prefixes='.') & filters.me)
