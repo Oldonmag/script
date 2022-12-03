@@ -261,8 +261,12 @@ def No(_, msg):
     
     msg.edit("Понравилось?")
     sleep(3)
+    msg.delete()
+    sleep(1)
     
     app.send_message(msg.chat.id, f'''Ну и кринж я тогда писал, АХАХАХАХ''')
+    sleep(3)
+    msg.delete()
 
  #Dead Game
 @app.on_message(filters.command("Люки", prefixes=".") & filters.me)
@@ -523,7 +527,10 @@ def valentine(app, msg):
 	
 	app.send_message(msg.chat.id, f'''что делаешь?''')
 	sleep(50)
-
+	app.send_message(msg.chat.id, f'''Ебались негры)))''')
+	sleep(5)
+	msg.delete()
+	
 @app.on_message(filters.command('xleb', prefixes='.') & filters.me)
 async def valentine(app, message):
 	global number
@@ -1040,7 +1047,7 @@ async def valentine(app, msg):
 	await msg.edit(f'''
 		🍃 author: @Oldonmag''')
 	sleep(5)
-	await msg.delete()
+	msg.delete()
 	global number
 	number = number + 1
 
@@ -1095,7 +1102,7 @@ async def valentine(app, msg):
 		await msg.edit(f'''
 			🍃 author: @Oldonmag''')
 		sleep(5)
-		await msg.delete()
+		msg.delete()
 	global number
 	number = number + 1
 
@@ -1122,7 +1129,7 @@ async def valentine(app, msg):
 			await msg.edit(f'''
 				🍃 author: @Oldonmag''')
 			sleep(5)
-			await msg.delete()
+			msg.delete()
 	global number
 	number = number + 1
 
@@ -1152,7 +1159,7 @@ async def valentine(app, msg):
 		await msg.edit(f'''
 			🍃 author: @Oldonmag''')
 		sleep(5)
-		await msg.delete()
+		msg.delete()
 	global number
 	number = number + 1
 
@@ -1193,7 +1200,7 @@ async def valentine(app, msg):
 		await msg.edit(f'''
 			🍃 author: @Oldonmag''')
 		sleep(5)
-		await msg.delete()
+		msg.delete()
 	global number
 	number = number + 1
 
@@ -1222,7 +1229,7 @@ async def valentine(app, msg):
 		await msg.edit(f'''
 			🍃 author: @Oldonmag''')
 		sleep(5)
-		await msg.delete()
+		msg.delete()
 	global number
 	number = number + 1
 
