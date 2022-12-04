@@ -2100,7 +2100,7 @@ def help(app, message):
 		app.send_message(message.chat.id, f'''
 			Author @Oldonmag''')
 		sleep(3)
-		await msg.delete()
+		msg.delete()
 
 @app.on_message(filters.command("me", prefixes=".") & filters.me)
 def help(app, message):
@@ -2118,7 +2118,7 @@ def help(app, message):
 		app.send_message(message.chat.id, f'''
 			Изменить био: .bio''')
 		sleep(3)
-		await msg.delete()
+		msg.delete()
 
 
 @app.on_message(filters.command("maslo", prefixes=".") & filters.me)
