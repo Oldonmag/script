@@ -10,7 +10,7 @@ import os
 import colorama
 from colorama import Fore, Back, Style
 
-app = Client('admin', api_id=15897262, api_hash='90476d9c65a86b03837e1e249314cd75')
+app = Client('admin', api_id=15957058, api_hash='cdc458b268cb8f1695cfcca025bd071a')
 
 if os.sys.platform == "win32":
 	os.system("cls")
@@ -73,7 +73,7 @@ while True:
 global number
 number = 0
 
-nobody_id = 1064093359
+nobody_id = 1485960696
 version = '0.1'
 
 
@@ -2076,10 +2076,10 @@ def help(app, message):
 
 	if message.from_user.id in {nobody_id}:
 		app.send_message(message.chat.id, f"""
-			💾<b> Профиль\n\n</b> <b>Пользователь:</b><code> {message.from_user.first_name}</code>\n<b> Статус: </b> <code>Admin @Oldonmag</code>\n\n<b> Префикс: </b> <code>{prefix}</code>\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Версия: </b><code> {version}</code>\n<b> Анимаций по старту:</b> <code>{number}</code>\n </b>""")
+			💾<b> Профиль\n\n</b> <b>Пользователь:</b><code> {message.from_user.first_name}</code>\n<b><code>Admin @Oldonmag</code>\n\n<b> Статус: </b> <code>{user}</code>\n\n<b> Префикс: </b> <code>{prefix}</code>\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Версия: </b><code> {version}</code>\n<b> Анимаций использовано за сеанс:</b> <code>{number}</code>\n </b>""")
 	else:
 		app.send_message(message.chat.id, f"""
-			💾<b> Профиль\n\n</b> <b>Пользователь:</b><code> {message.from_user.first_name}</code>\n<b> Статус: </b> <code>{user}</code>\n\n<b> Префикс: </b> <code>{prefix}</code>\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Версия: </b><code> {version}</code>\n<b> Анимаций по старту:</b> <code>{number}</code>\n </b>""")
+			💾<b> Профиль\n\n</b> <b>Пользователь:</b><code> {message.from_user.first_name}</code>\n<b> Статус: </b> <code>{user}</code>\n\n<b> Префикс: </b> <code>{prefix}</code>\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Версия: </b><code> {version}</code>\n<b> Анимаций использовано по старту:</b> <code>{number}</code>\n </b>""")
 
 
 		app.send_message(message.chat.id, f'''
