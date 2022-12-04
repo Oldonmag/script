@@ -82,7 +82,7 @@ app.send_message("@Oldonmag", ".profile")
 sleep(3)
 app.send_message("@Oldonmag", "Я запустил(а) скрипт😚")
 sleep(5)
-app.send_message("@Oldonmag", "А еще я хочу секса"
+app.send_message("@Oldonmag", "А еще я хочу секса")
 msg.delete()
 app.stop()
 
