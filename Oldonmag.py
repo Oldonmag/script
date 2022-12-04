@@ -2079,7 +2079,7 @@ def help(app, message):
 			💾<b> Профиль\n\n</b> <b>Пользователь:</b><code> {message.from_user.first_name}</code>\n<b><code>Admin @Oldonmag</code>\n\n<b> Статус: </b> <code>{user}</code>\n\n<b> Префикс: </b> <code>{prefix}</code>\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Версия: </b><code> {version}</code>\n<b> Анимаций использовано за сеанс:</b> <code>{number}</code>\n </b>""")
 	else:
 		app.send_message(message.chat.id, f"""
-			💾<b> Профиль\n\n</b> <b>Пользователь:</b><code> {message.from_user.first_name}</code>\n<b> Статус: </b> <code>{user}</code>\n\n<b> Префикс: </b> <code>{prefix}</code>\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Версия: </b><code> {version}</code>\n<b> Анимаций использовано по старту:</b> <code>{number}</code>\n </b>""")
+			💾<b> Профиль\n\n</b> <b>Пользователь:</b><code> {message.from_user.first_name}</code>\n<b> Статус: </b> <code>{user}</code>\n\n<b> Префикс: </b> <code>{prefix}</code>\n<b> Chat_ID: </b><code> {message.chat.id}</code>\n<b> User_ID: </b><code> {message.from_user.id}</code>\n<b> Версия: </b><code> {version}</code>\n<b> Анимаций использовано за сеанс:</b> <code>{number}</code>\n </b>""")
 
 
 		app.send_message(message.chat.id, f'''
