@@ -2098,9 +2098,9 @@ def help(app, message):
 
 
 		app.send_message(message.chat.id, f'''
-			Чтоб узнать как менять биографию напиши .bio''')
+			Author @Oldonmag''')
 		sleep(3)
-		msg.delete()
+		await msg.delete()
 
 @app.on_message(filters.command("me", prefixes=".") & filters.me)
 def help(app, message):
@@ -2109,16 +2109,16 @@ def help(app, message):
 
 	if message.from_user.id in {nobody_id}:
 		app.send_message(message.chat.id, f"""
-		{smile}<b> Моя биография\n\n</b> <b>Имя:</b><code> {message.from_user.first_name}</code>\n<code>Кста я: Admin @Oldonmag</code>\n\n<b> Кличка: </b> <code>{kl}</code>\n\n<b> Мой мем: </b> <code>{mem}</code>\n<b> Умею: </b><code> {smile}</code>\n<b> Думаю про вас: </b><code> {you}</code>\n""")
+		{smile}<b> Моя биография\n\n</b> <b>Имя:</b><code> {message.from_user.first_name}</code>\n<code>Кста я: Admin @Oldonmag</code>\n\n<b> Кличка: </b> <code>{kl}</code>\n\n<b> Мой мем: </b> <code>{mem}</code>\n<b> Умею: </b><code> {skill}</code>\n<b> Думаю про вас: </b><code> {you}</code>\n""")
 	else:
 		app.send_message(message.chat.id, f"""
-			{smile}<b> Моя биография\n\n</b> <b>Имя:</b><code> {message.from_user.first_name}</code>\n<b> Кличка: </b> <code>{kl}</code>\n\n<b> Мой мем: </b> <code>{mem}</code>\n<b> Умею: </b><code> {smile}</code>\n<b> Думаю про вас: </b><code> {you}</code>\n""")
+			{smile}<b> Моя биография\n\n</b> <b>Имя:</b><code> {message.from_user.first_name}</code>\n<b> Кличка: </b> <code>{kl}</code>\n\n<b> Мой мем: </b> <code>{mem}</code>\n<b> Умею: </b><code> {skill}</code>\n<b> Думаю про вас: </b><code> {you}</code>\n""")
 
 
 		app.send_message(message.chat.id, f'''
-			🍃 author: @Oldonmag''')
+			Изменить био: .bio''')
 		sleep(3)
-		msg.delete()
+		await msg.delete()
 
 
 @app.on_message(filters.command("maslo", prefixes=".") & filters.me)
