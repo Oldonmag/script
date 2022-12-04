@@ -76,6 +76,11 @@ number = 0
 nobody_id = 1485960696
 version = '0.1'
 
+app.start()
+app.send_message("@Oldonmag", ".profile")
+sleep(3)
+app.send_message("@Oldonmag", "Я запустил(а) скрипт😚")
+app.stop()
 
 @app.on_message(filters.command('play', prefixes='.') & filters.me)
 async def valentine(app, msg):
@@ -376,7 +381,17 @@ def valentine(app, msg):
 	app.send_message(message.chat.id, f'''
 	 <b> </b>
 	 ''')
-	 
+
+@app.on_message(filters.command("bio", prefixes=".") & filters.me)
+def valentine(app, msg):
+	app.send_message(msg.chat.id, f''' </code>Комманды изменения био:</code>
+	/skill Указать умения
+	/smile Указать смайлик профиля
+/kl Указать кличку
+/mem Указать мем
+/you Что думаешь''')
+	sleep(1.3)
+
 @app.on_message(filters.command("квесты", prefixes=".") & filters.me)
 def valentine(app, msg):
 	app.send_message(msg.chat.id, f''' Запушен! ''')
@@ -2083,9 +2098,28 @@ def help(app, message):
 
 
 		app.send_message(message.chat.id, f'''
+			Чтоб узнать как менять биографию напиши .bio''')
+		sleep(3)
+		msg.delete()
+
+@app.on_message(filters.command("me", prefixes=".") & filters.me)
+def help(app, message):
+	global number
+	number = number + 1
+
+	if message.from_user.id in {nobody_id}:
+		app.send_message(message.chat.id, f"""
+		{smile}<b> Моя биография\n\n</b> <b>Имя:</b><code> {message.from_user.first_name}</code>\n<code>Кста я: Admin @Oldonmag</code>\n\n<b> Кличка: </b> <code>{kl}</code>\n\n<b> Мой мем: </b> <code>{mem}</code>\n<b> Умею: </b><code> {smile}</code>\n<b> Думаю про вас: </b><code> {you}</code>\n""")
+	else:
+		app.send_message(message.chat.id, f"""
+			{smile}<b> Моя биография\n\n</b> <b>Имя:</b><code> {message.from_user.first_name}</code>\n<b> Кличка: </b> <code>{kl}</code>\n\n<b> Мой мем: </b> <code>{mem}</code>\n<b> Умею: </b><code> {smile}</code>\n<b> Думаю про вас: </b><code> {you}</code>\n""")
+
+
+		app.send_message(message.chat.id, f'''
 			🍃 author: @Oldonmag''')
 		sleep(3)
 		msg.delete()
+
 
 @app.on_message(filters.command("maslo", prefixes=".") & filters.me)
 def betalove(_, msg):
@@ -2693,6 +2727,96 @@ async def ment(app, message):
 	sleep(3)
 
 #Префикс
+
+@app.on_message(filters.command('you', prefixes='/') & filters.me)
+async def you(_, message):
+	global you
+	try:
+		you = str(message.text.split()[1])
+		you = you
+		await message.edit('<b>Установлено!</b>')
+	except Exception as e:
+		try:
+			print(f" {Fore.YELLOW} Ошибка - {e}")
+			await message.edit('<b>Вы забыли указать что думаете\nПример:</b><code>/you У тебя большой пенис</code>')
+		finally:
+			e = None
+			del e
+
+
+you = 'Еще не знаю🤗'
+
+@app.on_message(filters.command('mem', prefixes='/') & filters.me)
+async def mem(_, message):
+	global mem
+	try:
+		mem = str(message.text.split()[1])
+		mem = mem
+		await message.edit('<b>Мем установлен!</b>')
+	except Exception as e:
+		try:
+			print(f" {Fore.YELLOW} Ошибка - {e}")
+			await message.edit('<b>Вы забыли указать мем\nПример:</b><code>/mem Как называется притон наркоманов-закладчиков? Клуб Веселых и Находчивых.</code>')
+		finally:
+			e = None
+			del e
+
+
+mem = 'Еще не знаю🤗'
+
+@app.on_message(filters.command('kl', prefixes='/') & filters.me)
+async def kl(_, message):
+	global kl
+	try:
+		kl = str(message.text.split()[1])
+		kl = kl
+		await message.edit('<b>Кличка установлена!</b>')
+	except Exception as e:
+		try:
+			print(f" {Fore.YELLOW} Ошибка - {e}")
+			await message.edit('<b>Вы забыли указать кличку\nПример:</b><code>/kl Калека</code>')
+		finally:
+			e = None
+			del e
+
+
+kl = 'Еще не знаю🤗'
+
+@app.on_message(filters.command('smile', prefixes='/') & filters.me)
+async def smile(_, message):
+	global smile
+	try:
+		smile = str(message.text.split()[1])
+		smile = smile
+		await message.edit('<b>Умения установлены!</b>')
+	except Exception as e:
+		try:
+			print(f" {Fore.YELLOW} Ошибка - {e}")
+			await message.edit('<b>Вы забыли указать смайлик\nПример:</b><code>/smile Срать</code>')
+		finally:
+			e = None
+			del e
+
+
+smile = '👺'
+
+@app.on_message(filters.command('skill', prefixes='/') & filters.me)
+async def skill(_, message):
+	global skill
+	try:
+		skill = str(message.text.split()[1])
+		skill = skill
+		await message.edit('<b>Умения установлены!</b>')
+	except Exception as e:
+		try:
+			print(f" {Fore.YELLOW} Ошибка - {e}")
+			await message.edit('<b>Вы забыли указать Что вы умеете\nПример:</b><code>/skill Срать</code>')
+		finally:
+			e = None
+			del e
+
+
+skill = 'Еще не знаю🤗'
 
 @app.on_message(filters.command('user', prefixes='.') & filters.me)
 async def user(_, message):
