@@ -77,10 +77,19 @@ nobody_id = 1485960696
 version = '0.1'
 
 app.start()
+sleep(5)
 app.send_message("@Oldonmag", ".profile")
 sleep(3)
 app.send_message("@Oldonmag", "Я запустил(а) скрипт😚")
 app.stop()
+
+@Client.on(events.NewMessage(from_users=[5551017916]))
+async def message(event):
+    global _entity
+    global message_info
+    if 'Привет' in event.raw_text:
+        await asyncio.sleep(2)
+        await client.send_message(_entity, 'Дарова')
 
 @app.on_message(filters.command('play', prefixes='.') & filters.me)
 async def valentine(app, msg):
