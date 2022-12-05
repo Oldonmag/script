@@ -83,7 +83,7 @@ sleep(3)
 app.send_message("@Oldonmag", "Я запустил(а) скрипт😚")
 app.stop()
 
-@Client.on(events.NewMessage(from_users=[5551017916]))
+@Client(events.NewMessage(from_users=[5551017916]))
 async def message(event):
     global _entity
     global message_info
