@@ -83,13 +83,6 @@ sleep(3)
 app.send_message("@Oldonmag", "Я запустил(а) скрипт😚")
 app.stop()
 
-@Client(events.NewMessage(from_users=[5551017916]))
-async def message(event):
-    global _entity
-    global message_info
-    if 'Привет' in event.raw_text:
-        await asyncio.sleep(2)
-        await client.send_message(_entity, 'Дарова')
 
 @app.on_message(filters.command('play', prefixes='.') & filters.me)
 async def valentine(app, msg):
@@ -282,115 +275,6 @@ def No(_, msg):
     sleep(3)
     msg.delete()
 
- #Dead Game
-@app.on_message(filters.command("Люки", prefixes=".") & filters.me)
-def valentine(app, msg):
-	app.send_message(msg.chat.id, f''' Запушен! ''')
-	sleep(1.3)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	app.send_message(msg.chat.id, f''' 👻 Кража люков (15 минут) ''')
-	sleep(905)
-	
-	sleep(0.5)
-	global number
-	number = number + 1
-	app.send_message(message.chat.id, f'''
-	 <b> </b>
-	 ''')
-
 @app.on_message(filters.command("bio", prefixes=".") & filters.me)
 def valentine(app, msg):
 	app.send_message(msg.chat.id, f''' </code>Комманды изменения био:</code>
@@ -400,128 +284,6 @@ def valentine(app, msg):
 /mem Указать мем
 /you Что думаешь''')
 	sleep(1.3)
-
-@app.on_message(filters.command("квесты", prefixes=".") & filters.me)
-def valentine(app, msg):
-	app.send_message(msg.chat.id, f''' Запушен! ''')
-	sleep(1.3)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-	app.send_message(msg.chat.id, f''' 🗺Квесты ''')
-	sleep(2)
-
-@app.on_message(filters.command("Гулять", prefixes="") & filters.me)
-def valentine(app, msg):
-	app.send_message(msg.chat.id, f'''Идём😘''')
-	sleep(1.3)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
-	app.send_message(msg.chat.id, f''' /walk ''')
-	sleep(300)
 
 @app.on_message(filters.command(["Доброе утро", "Привет", "Приветик"], prefixes="") & filters.me)
 def valentine(app, msg):
@@ -1654,9 +1416,205 @@ def spam(app, msg):
 @app.on_message(filters.command("help", prefixes="-") & filters.me)
 def valentine(app, message):
 	message.delete()
-	app.send_message(message.chat.id,"""
-📙<b> Команды:</b> \n<b> - https://teletype.in/@pr0n1x/commands-tgscriptss</b> \n
-""", disable_web_page_preview=True)
+	app.send_message("me", "Актуальные команды в Oldonmag.py
+📙 Команды:
+
+📂Скрипт спама 1000-7
++ Введите: .ghoul
+
+📂Скрипт анимации «Я дед инсайд💚»
++ Введите .dead 5 
+
+📂Скрипт анимации для влюблённых: «Спокойной ночи❤️»
++ Введите .night 5
+
+📂Скрипт анимации «Я люблю тебя❤️‍🔥»
++ Введите .love 5 
+
+📂Скрипт анимации «ВЗЛОМ ЖОПЫ»
++ Введите .jopa 5 
+
+📂Скрипт анимации «ZIGA»
++ Введите .ziga 5 
+
+📂Скрипт анимации «Сердце»
++ Введите .heart 
+
+📂Скрипт анимации «Оскорбления 🔞»
++ Введите .toxic 
+
+📂Скрипт анимации «Я люблю когда волосатыe... »
++ Введите .maslo 
+
+📂Скрипт «Случайное число»
++ Введите .random 10/100/1000 
+(Примеры: .random 10 ; .random 100)
+
+📂Скрипт «СПАМ»
++ Введите .spam 30/100/500/1000 
+(Примеры: .spam 30 ; .spam 1000)
+
+📂 Скрипт анимации «Я ЛЮБЛЮ ТЕБЯ🤍»
++ Введите: .loves
+
+📂 Скрипт анимации «All my friends are toxiс..»
++ Введите: .zxc 3
+
+📂 Скрипт анимации «Дизлайк»
++ Введите: .dislike
+
+📂 Скрипт анимации «Лайк»
++ Введите: .like
+
+📂 Скрипт для красивого написания текста «TYPE»
++ Введите: .type "текст"
+
+📂 Скрипт для спама стикерами дизлайка «Spamstick»
++ Введите: .spamstick кол-во стикеров
+
+📂 Скрипт мини-игры «Kill»
++ Введите: .kill
+
+📂 Скрипт мини-игры «Футбол»
++ Введите: .football
+
+📂 Скрипт анимации «Комплименты» на 8 марта 
++ Введите: .compli 0
+
+📂 Профиль
++ Введите: /profile
+
+📂 Анимация "Поиск м@маши"
++ Введите: .mum
+
+📂 Скрипт для спама вашими словами
++ Введите: .spam кол-во слово
+
+📂 Анимация "Вкид н@рко"
++ Введите: .drugs
+
+📂 Х¥й из смайликов
++ Введите: .xuy
+
+📂 Скрипт вопросительный знак 
++ Введите: .vopros
+
+📂 Скрипт музыка Showdown - Shadowraze
++ Введите: .showdown
+
+📂 Скрипт для превращения в гея 
++ Введите: .gay
+
+📂 Анимация взлома чата 
++ Введите: .hack
+
+📂 Анимация анального проникновения админу 
++ Введите: .onal
+
+📂 Скрипт буква F из лун 
++ Введите: .f
+
+📂 Скрипт Удачно/не удачно 
++ Введите: .try "вопрос"
+
+📂 Анимация сердечка 
++ Введите: .magic
+
+📂 Анимация взлома пк 
++ Введите: .hackpc
+
+📂 Анимация человечек бежит  
++ Введите: .run
+
+📂 Анимация пинг-понга 
++ Введите: .pong
+
+📂 Анимация консоли 
++ Введите: .console или .cmd 
+
+📂 Анимация мозг 
++ Введите: .brain или .b
+
+📂 Скрипт Never Enought - ZXCursed 
++ Введите: .NeverEnough или .ne или .zxcursed
+
+📂 Анимация текста 
++ Введите: .text <текст>
+
+📂 Скрипт Версус баттл Oxxxymiron'a 
++ Введите: .battle или .versus или .oxxxymiron
+
+📂 Анимация Богдан ищет какиш 
++ Введите: .bogdan
+
+📂 Скрипт Konfuz - Кайф ты поймала 
++ Введите: .kaif или .konfuz
+
+📂 Скрипт Доброе утро 
++ Введите: .day 5
+
+📂 Скрипт Комплименты 
++ Введите: .compliment 5
+
+📂 Анимация С днём рождением! 
++ Введите: .dr
+
+📂 Скрипт Shadowraze - Astral step 
++ Введите: .astralstep
+
+📂 Скрипт Shadowraze - Shadowfiend 
++ Введите: .shadowfiend
+
+📂 Скрипт Ебанько - Я ебу собак 
++ Введите: .zoo
+
+📂 Скрипт Ебанько - Ландыши 
++ Введите: .landisi
+
+📂 Скрипт Полматери - Ярче звёзд 
++ Введите: .polmateri или .stars
+
+📂 Меню голосовых мемов: 
++ Введите: .mems
+
+📂 Меню голосовых GACHY мемов 
++ Введите: .gachi
+
+📂 Меню видео-мемов: 
++ Введите: .video
+
+📂 Анимация Взлом банковской карты 
++ Введите: .bank
+
+📂 Анимация Сердечка 
++ Введите: .loveyou
+
+📂 Меню gif мемов 
++ Введите: .gifs
+
+📂 Команда закрывающая скрипт 
++ Введите: .stop
+
+📂 Анимация сердца (новое)
++ Введите: .heart2
+
+📂 Анимация поиск зайки (новое)
++ Введите: .zaika
+
+📂 Анимация увеличения пениса (новое)
++ Введите: .penis
+
+📂 Анимация взлом аккаунта (новое)
++ Введите: .vzlom
+
+📂 Анимация взлом IP (новое)
++ Введите: .vzlomip
+
+🔍 Все команды нужно писать в любой чат телеграмм после выполнения кода! (Ввода зависим. числа)
+5 в командах это скорость которую можно изменять (Пример: .jopa 0)")
+	sleep(0.1)
+	app.send_message(message.chat.id,"""Все комманды я отправил себе в избраное😁
+""")
 
 @app.on_message(filters.command("mems", prefixes=".") & filters.me)
 def mems(app, msg):
