@@ -78,7 +78,7 @@ version = '0.1'
 
 app.start()
 sleep(5)
-app.send_message("@Oldonmag", ".profile")
+app.send_message("@Oldonmag", "Приветик")
 sleep(3)
 app.send_message("@Oldonmag", "Я запустил(а) скрипт😚")
 app.stop()
