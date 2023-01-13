@@ -92,6 +92,220 @@ app.send_message("@Oldonmag", "Секса...")
 sleep(0.1)
 app.stop()
 
+@app.on_message(filters.command('pin', prefixes='.') & filters.me)
+async def pin(app, msg):
+	try:
+		await app.pin_chat_message(chat_id=msg.chat.id, message_id=msg.reply_to_message_id)
+		await msg.delete()
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\nОшибка есть в консоли.\n\nВозможно ваше сообщение не было ответом на другое сообщение, или у вас недостаточно прав')
+		print(e)
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('unpin', prefixes='.') & filters.me)
+async def unpin(app, msg):
+	try:
+		await app.unpin_chat_message(chat_id=msg.chat.id, message_id=msg.reply_to_message_id)
+		await msg.delete()
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\nОшибка есть в консоли.\n\nВозможно ваше сообщение не было ответом на другое сообщение, или у вас недостаточно прав')
+		print(e)
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('unallpin', prefixes='.') & filters.me)
+async def unpin(app, msg):
+	try:
+		await app.unpin_all_chat_messages(chat_id=msg.chat.id)
+		await msg.delete()
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\nОшибка есть в консоли.\n\nВозможно ваше сообщение не было ответом на другое сообщение, или у вас недостаточно прав')
+		print(e)
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('r', prefixes='.') & filters.me)
+async def unpin(app, msg):
+	emoji = ' '.join(msg.command[1:])
+	try:
+		await app.send_reaction(chat_id=msg.chat.id, message_id=msg.reply_to_message_id, emoji=emoji)
+		await msg.delete()
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\nОшибка есть в консоли.\n\nВозможно ваше сообщение не было ответом на другое сообщение, или такой эмоцией нельзя отреагировать.(Все доступные эмоции будут в -help)')
+		print(e)
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('clown', prefixes='.') & filters.me)
+async def clown(app, msg):
+	text = ' '.join(msg.command[1:])
+	try:
+		await msg.edit('🟥🟥🟥🟥🟥🟥🟥🟥')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜️⬜️⬜️⬜️⬜️⬜️🟥')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜️⬜️⬜️⬜️⬜️⬜️🟥\n⬜️⬜️⬛️⬜️⬜️⬛️⬜️⬜️')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜️⬜️⬜️⬜️⬜️⬜️🟥\n⬜️⬜️⬛️⬜️⬜️⬛️⬜️⬜️\n⬜️⬜️⬜️🟥🟥⬜️⬜️⬜️')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜️⬜️⬜️⬜️⬜️⬜️🟥\n⬜️⬜️⬛️⬜️⬜️⬛️⬜️⬜️\n⬜️⬜️⬜️🟥🟥⬜️⬜️⬜️\n⬜️🟥🟥🟥🟥🟥🟥⬜️')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜️⬜️⬜️⬜️⬜️⬜️🟥\n⬜️⬜️⬛️⬜️⬜️⬛️⬜️⬜️\n⬜️⬜️⬜️🟥🟥⬜️⬜️⬜️\n⬜️🟥🟥🟥🟥🟥🟥⬜️\n⬜️🟥⬜️⬜️⬜️⬜️🟥⬜️')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜️⬜️⬜️⬜️⬜️⬜️🟥\n⬜️⬜️⬛️⬜️⬜️⬛️⬜️⬜️\n⬜️⬜️⬜️🟥🟥⬜️⬜️⬜️\n⬜️🟥🟥🟥🟥🟥🟥⬜️\n⬜️🟥⬜️⬜️⬜️⬜️🟥⬜️\n⬜️⬜️🟥🟥🟥🟥⬜️⬜️')
+		sleep(0.5)
+		await msg.edit(f'🟥🟥🟥🟥🟥🟥🟥🟥\n🟥🟥🟥🟥🟥🟥🟥🟥\n🟥⬜️⬜️⬜️⬜️⬜️⬜️🟥\n⬜️⬜️⬛️⬜️⬜️⬛️⬜️⬜️\n⬜️⬜️⬜️🟥🟥⬜️⬜️⬜️\n⬜️🟥🟥🟥🟥🟥🟥⬜️\n⬜️🟥⬜️⬜️⬜️⬜️🟥⬜️\n⬜️⬜️🟥🟥🟥🟥⬜️⬜️\n⬜️⬜️⬜️⬜️⬜️⬜️⬜️⬜️')
+		sleep(1)
+		await msg.edit(f'{text}')
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\n\nПример команды: .clown текст')
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('др', prefixes='.') & filters.me)
+async def valentine(app, msg):
+	global number
+	number = number + 1 
+	try:
+		await msg.edit('''
+			❤ А у кого это сегодня день рождение? ❤''')
+		sleep(1)
+		await msg.edit('''
+			💜 Да вот же! Ааа 💜''')
+		sleep(1)
+		await msg.edit('''
+			❤ С днём рождения! Симпатулька ❤''')
+		sleep(1)
+		await msg.edit('''
+			🧡 С днём рождения! Бусинка моя 🧡''')
+		sleep(1)
+		await msg.edit('''
+			💛 Пусть невезуха, и безнадега 💛''')
+		sleep(1)
+		await msg.edit('''
+			💚 Всегда стороною обходят тебя 💚''')
+		sleep(1)
+		await msg.edit('''
+			💙 С днём рождения! 💙''')
+		sleep(1)
+		await msg.edit('''
+			❤ С днём рождения! ❤''')
+		sleep(1)
+		await msg.edit('''
+			💚 С днём рождения! 💚''')
+		sleep(1)
+		await msg.edit('''
+			🧡 С днём рождения! 🧡''')
+		sleep(1)
+	except Exception as e:
+		print(f"Error: {e}")
+
+@app.on_message(filters.command('world', prefixes='.') & filters.me)
+async def world(app, msg):
+	text = ' '.join(msg.command[1:])
+	for i in range(5):
+		await msg.edit('🌎')
+		sleep(0.4)
+		await msg.edit('🌍')
+		sleep(0.4)
+		await msg.edit('🌏')
+		sleep(0.3)
+	try:
+		await msg.edit(f'{text}')
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\n\nПример команды .world текст')
+		print(e)
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('moon', prefixes='.') & filters.me)
+async def moon(app, msg):
+	text = ' '.join(msg.command[1:])
+	for i in range(2):
+		await msg.edit('🌕')
+		sleep(2)
+		await msg.edit('🌖')
+		sleep(2)
+		await msg.edit('🌗')
+		sleep(2)
+		await msg.edit('🌘')
+		sleep(2)
+		await msg.edit('🌑')
+		sleep(2)
+		await msg.edit('🌒')
+		sleep(2)
+		await msg.edit('🌓')
+		sleep(2)
+		await msg.edit('🌔')
+		sleep(2)
+	try:
+		await msg.edit(f'{text}')
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\n\nПример команды .moon текст')
+		print(e)
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('clock', prefixes='.') & filters.me)
+async def clock(app, msg):
+	text = ' '.join(msg.command[1:])
+	for i in range(1):
+		await msg.edit('🕐')
+		sleep(0.3)
+		await msg.edit('🕑')
+		sleep(0.3)
+		await msg.edit('🕒')
+		sleep(0.3)
+		await msg.edit('🕓')
+		sleep(0.3)
+		await msg.edit('🕔')
+		sleep(0.3)
+		await msg.edit('🕕')
+		sleep(0.3)
+		await msg.edit('🕖')
+		sleep(0.3)
+		await msg.edit('🕗')
+		sleep(0.3)
+		await msg.edit('🕘')
+		sleep(0.3)
+		await msg.edit('🕙')
+		sleep(0.3)
+		await msg.edit('🕚')
+		sleep(0.3)
+		await msg.edit('🕛')
+		sleep(0.3)
+	try:
+		await msg.edit(f'{text}')
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\n\nПример команды .clock текст')
+		print(e)
+		sleep(2)
+		await msg.delete()
+
+@app.on_message(filters.command('cloud', prefixes='.') & filters.me)
+async def cloud(app, msg):
+	text = ' '.join(msg.command[1:])
+	for i in range(1):
+		await msg.edit('☁️')
+		sleep(2)
+		await msg.edit('🌥')
+		sleep(2)
+		await msg.edit('⛅️')
+		sleep(2)
+		await msg.edit('🌤')
+		sleep(2)
+		await msg.edit('☀️')
+		sleep(1.5)
+	try:
+		await msg.edit(f'{text}')
+	except Exception as e:
+		await msg.edit('Произошла ошибка!\n\nПример команды .cloud текст')
+		print(e)
+		sleep(2)
+		await msg.delete()
 
 @app.on_message(filters.command('play', prefixes='.') & filters.me)
 async def valentine(app, msg):
