@@ -538,7 +538,7 @@ def valentine(app, msg):
 	sleep(50)
 	app.send_message(msg.chat.id, f'''Ебались негры)))''')
 	sleep(5)
-	msg.delete()
+	massage.delete()
 	
 @app.on_message(filters.command('xleb', prefixes='.') & filters.me)
 async def valentine(app, message):
